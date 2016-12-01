@@ -1,0 +1,68 @@
+﻿$colour-derek-shepherd: #FFFFFF;
+$colour-meredith-gray: #1ABC9C;
+$colour-richard-webber: #000000;
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    > .row {
+        flex: 1;
+    }
+
+    .row {
+        padding: 0;
+        margin: 0;
+
+        .col {
+            height: 100%;
+            position: relative;
+
+            .option-link {
+                color: $colour-richard-webber;
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+
+                &.-disabled {
+                    pointer-events: none;
+                    cursor: default;
+                    opacity: 0.2;
+                }
+
+                .option-image {
+                    position: absolute;
+                    top: 30%;
+                    left: 35%;
+                    width: 30%;
+                }
+
+                .option-text {
+                    position: absolute;
+                    top: 85%;
+                    left: 2.5%;
+                    width: 95%;
+                    font-size: 24px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .header {
+        flex: 0.5 !important;
+        align-items: center;
+        justify-content: center;
+        background-color: $colour-meredith-gray;
+        color: $colour-derek-shepherd;
+
+        .header-title {
+            font-size: 32px;
+        }
+    }
+
+    .icon-row {
+        align-items: center;
+    }
+}

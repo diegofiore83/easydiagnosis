@@ -1,0 +1,26 @@
+<ion-view view-title="Choose Your Language">
+    <ion-pane>
+        <ion-content scroll="false">
+            <section class="home-container">
+                <div class="row header">
+                    <span class="header-title">Choose your language</span>
+                </div>
+                <div class="row icon-row" ng-repeat="language in languages" ng-if="$index % 2 == 0">
+                    <div class="col">
+                        <a class="option-link" ng-class="{'-disabled': !languages[$index].enable}" ng-href="#/app/survey/{{languages[$index].name}}">
+                            <img class="option-image" ng-src="http://www.diegofiore.com/assets/flags/{{languages[$index].name}}.svg" alt="" />
+                            <span class="option-text">{{languages[$index].original}}</span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a class="option-link" ng-class="{'-disabled': !languages[$index + 1].enable}" ng-href="#/app/survey/{{languages[$index + 1].name}}">
+                            <img class="option-image" ng-src="http://www.diegofiore.com/assets/flags/{{languages[$index + 1].name}}.svg" alt="" />
+                            <span class="option-text">{{languages[$index + 1].original}}</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </ion-content>
+    </ion-pane>
+</ion-view>
+
